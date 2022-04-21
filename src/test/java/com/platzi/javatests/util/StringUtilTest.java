@@ -3,7 +3,7 @@ package com.platzi.javatests.util;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.assertThrows;
+import static org.junit.Assert.*;
 
 public class StringUtilTest {
 
@@ -30,4 +30,26 @@ public class StringUtilTest {
             StringUtil.repeat("hola", -1);
         });
     }
+    @Test
+    public void empty_is_false(){
+        assertFalse(StringUtil.isEmpty("Ruben"));
+    }
+
+    @Test
+    public void Empty_quotationMarks(){
+        assertTrue(StringUtil.isEmpty(""));
+    }
+
+    @Test
+    public void Empty_space(){
+        String str = new String(" ");
+        assertTrue(StringUtil.isEmpty(str));
+    }
+
+    @Test
+    public void empty_null(){
+        assertTrue(StringUtil.isEmpty(null));
+    }
+
+
 }
