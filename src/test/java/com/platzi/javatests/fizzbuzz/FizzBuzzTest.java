@@ -14,22 +14,22 @@ public class FizzBuzzTest {
     @Test
     public void return_Fizz_when_the_number_is_divisible_by_3() {
         assertThat(FizzBuzz.fizzBuzz(3), is("Fizz"));
-        assertThat(FizzBuzz.fizzBuzz(3627), is("Fizz"));
-        assertThat(FizzBuzz.fizzBuzz(2553), is("Fizz"));
+        assertThat(FizzBuzz.fizzBuzz(6), is("Fizz"));
+        assertThat(FizzBuzz.fizzBuzz(9), is("Fizz"));
     }
 
     @Test
-    public void return_Buzz_when_theN_number_is_divisible_by_5() {
+    public void return_Buzz_when_the_number_is_divisible_by_5() {
         assertThat(FizzBuzz.fizzBuzz(5), is("Buzz"));
-        assertThat(FizzBuzz.fizzBuzz(32870), is("Buzz"));
-        assertThat(FizzBuzz.fizzBuzz(7160), is("Buzz"));
+        assertThat(FizzBuzz.fizzBuzz(10), is("Buzz"));
+        assertThat(FizzBuzz.fizzBuzz(20), is("Buzz"));
     }
 
     @Test
     public void return_FizzBuzz_when_the_number_is_divisible_by_3_dnd_by_5() {
         assertThat(FizzBuzz.fizzBuzz(15), is("FizzBuzz"));
-        assertThat(FizzBuzz.fizzBuzz(2550), is("FizzBuzz"));
-        assertThat(FizzBuzz.fizzBuzz(495), is("FizzBuzz"));
+        assertThat(FizzBuzz.fizzBuzz(30), is("FizzBuzz"));
+        assertThat(FizzBuzz.fizzBuzz(45), is("FizzBuzz"));
     }
 
     @Test
