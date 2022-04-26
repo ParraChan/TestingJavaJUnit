@@ -70,7 +70,6 @@ public class MovieRepositoryIntegrationTest {
     }
 
 
-
     @After
     public void tearDown() throws Exception {
 

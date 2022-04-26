@@ -32,7 +32,8 @@ public class MovieServiceShould {
                         new Movie(4, "Super 8", 112, Genre.THRILLER),
                         new Movie(5, "Scream", 111, Genre.HORROR),
                         new Movie(6, "Home Alone", 103, Genre.COMEDY),
-                        new Movie(7, "Matrix", 136, Genre.ACTION)
+                        new Movie(7, "Matrix", 136, Genre.ACTION),
+                        new Movie(8, "Matrix", 136, Genre.ACTION)
                 )
         );
 
@@ -62,5 +63,10 @@ public class MovieServiceShould {
 
     private List<Integer> getMovieIds(Collection<Movie> movies) {
         return movies.stream().map(Movie::getId).collect(Collectors.toList());
+    }
+    @Test
+    public void load_movie_by_name() {
+        Collection<Movie> movies = movieService.findByName("matrix");
+        assertThat(getMovieIds(movies), CoreMatchers.is(Arrays.asList(7, 8)));
     }
 }
